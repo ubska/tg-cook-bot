@@ -1,2 +1,7 @@
 <?php
-file_put_contents('apidata.txt', "Ricevuto messaggio Telegram\n", FILE_APPEND);
+
+// Salva in una variabile  (i dati JSON)
+$data = json_decode(file_get_contents('php://input'), true);
+
+// Salva i dati in un file per controllare (opzionale)
+file_put_contents('apidata.txt', print_r($data, true), FILE_APPEND);
