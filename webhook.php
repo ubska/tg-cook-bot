@@ -1,4 +1,6 @@
 <?php
+// Importa il contenuto di config.php una sola volta
+require_once 'config.php';
 
 // Salva in una variabile  (i dati JSON)
 $data = json_decode(file_get_contents('php://input'), true);
